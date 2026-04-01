@@ -11,6 +11,8 @@ app.use(express.json());
  
 const authRoutes = require("./routes/authRoutes");
 app.use("/api/auth", authRoutes);
+const testRoute = require("./routes/middRoutes");
+app.use("/api/test", testRoute);
 
 app.get("/", (req, res) => {
     res.send("TaskOrbit API Running...");
